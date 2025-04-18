@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cop Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="service-icon-box">
+        <img src="./image.png" alt="tamil nadu" width="0">
+    </div>
+    <div id="chat-container">
+        <h1>Cop Chatbot</h1>
+        <div id="chatbox"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type a message..." onkeypress="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>

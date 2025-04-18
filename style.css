@@ -1,0 +1,187 @@
+/* Reset Default Browser Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full-Screen Chatbot */
+body {
+  background: url('tamil-nadu-government-logo-png-8.png') no-repeat center center fixed;
+  background-size: contain; /* Ensures the image fits well */
+  background-color: #000000; /* Fallback for better visibility */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Chat Container */
+#chat-container {
+  width: 100vw;  /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  max-width: none;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Chatbox */
+#chatbox {
+  flex: 1;
+  overflow-y: auto;
+  border: 2px solid blue;
+  padding: 15px;
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgb(0, 94, 255);
+}
+
+/* Chat Messages */
+.chat-message {
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  animation: messageFade 0.3s ease-in-out;
+}
+
+/* User Message */
+.user-message {
+  background: linear-gradient(135deg, #007bff, #001eff);
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+  border-top-right-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Bot Message */
+.bot-message {
+  background: linear-gradient(135deg, #444, #222);
+  color: white;
+  align-self: flex-start;
+  text-align: left;
+  border-top-left-radius: 0;
+  box-shadow: 0 0 10px rgba(68, 68, 68, 0.5);
+}
+
+/* Input Area */
+.input-area {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* User Input Field */
+#userInput {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  background: #111;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#userInput:focus {
+  border-color: cyan;
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Send Button */
+button {
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgb(0, 145, 255);
+}
+
+button:hover {
+  background: #ff0066;
+  box-shadow: 0 0 15px #003cff;
+  transform: scale(1.05);
+}
+
+/* Scrollbar Styling */
+#chatbox::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes messageFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.home-container button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: red;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgb(255, 0, 76);
+}
+
+.home-container button:hover {
+  background: darkred;
+  box-shadow: 0 0 15px rgb(255, 0, 0);
+  transform: scale(1.1);
+}
